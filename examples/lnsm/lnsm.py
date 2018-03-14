@@ -22,6 +22,7 @@ def main():
         num = int(sys.argv[2])
     else:
         num = NUM_LOOP
+
     btrssi = BluetoothRSSI(addr=addr)
     
     n=1.5    #Path loss exponent(n) = 1.5
@@ -40,12 +41,14 @@ def main():
             error = abs(actual_dist - distance)
             sum_error = sum_error + error
             avg_error = sum_error/count
-            print "Average Error=  " + str(avg_error)
-            print "Error=  " + str(error)
+            #print "Average Error=  " + str(avg_error)
+            #print "Error=  " + str(error)
             print "Approximate Distance:" + str(distance)
             print "RSSI: " + str(rssi_bt)
-            print "Count: " + str(count)
+            #print "Count: " + str(count)
             print " "
+        if(rssi_bt < -50):
+            break    
         time.sleep(1)
 
 
