@@ -38,8 +38,8 @@ def main():
                 x = float((rssi_bt-A0)/(-10*n))         #Log Normal Shadowing Model considering d0 =1m where  
                 distance = (math.pow(10,x) * 100) + c
                 total_dist += distance
-                #print "Approximate Distance:" + str(distance)
-                #print "RSSI: " + str(rssi_bt)
+                print "Approximate Distance:" + str(distance)
+                print "RSSI: " + str(rssi_bt)
                 time.sleep(.2)
         if count is 0:
             count = 1
