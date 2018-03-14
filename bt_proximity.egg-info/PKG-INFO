@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: bt-proximity
+Version: 0.1
+Summary: Detects if a Bluetooth device is near by querying its RSSI value
+Home-page: UNKNOWN
+Author: Ewen Chou
+Author-email: ewenchou@gmail.com
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN

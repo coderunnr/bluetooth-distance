@@ -1,0 +1,8 @@
+setup.py
+bt_proximity/__init__.py
+bt_proximity/bt_rssi.py
+bt_proximity.egg-info/PKG-INFO
+bt_proximity.egg-info/SOURCES.txt
+bt_proximity.egg-info/dependency_links.txt
+bt_proximity.egg-info/not-zip-safe
+bt_proximity.egg-info/top_level.txt
