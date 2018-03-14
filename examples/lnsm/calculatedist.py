@@ -7,7 +7,7 @@ import bluetooth
 NUM_LOOP = 30
 
 nearby_devices = bluetooth.discover_devices(
-        duration=10, lookup_names=True, flush_cache=True)
+        duration=10, lookup_names=True)
 
 def main():
 
@@ -38,7 +38,7 @@ def main():
                 x = float((rssi_bt-A0)/(-10*n))         #Log Normal Shadowing Model considering d0 =1m where  
                 distance = (math.pow(10,x) * 100) + c
                 total_dist += distance
-                print "Approximate Distance:" + str(distance)
+                print "Approximate Distance:" + name + str(distance)
                 print "RSSI: " + str(rssi_bt)
                 time.sleep(.2)
         if count is 0:
