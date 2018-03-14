@@ -30,7 +30,7 @@ def main():
         
         for i in range(1, NUM_LOOP):
             rssi = btrssi.get_rssi()
-            if rssi is null:
+            if rssi is None:
                 continue    
             rssi_bt = float(rssi)
             if(rssi_bt!=0 and i>10):                    #reduces initial false values of RSSI using initial delay of 10sec
