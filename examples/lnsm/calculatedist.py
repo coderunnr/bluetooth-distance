@@ -7,7 +7,7 @@ import bluetooth
 NUM_LOOP = 20
 
 nearby_devices = bluetooth.discover_devices(
-        duration=8, lookup_names=True, flush_cache=True, lookup_class=False)
+        duration=8, lookup_names=True, flush_cache=True)
 
 def main():
 
