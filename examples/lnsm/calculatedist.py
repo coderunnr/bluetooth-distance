@@ -13,11 +13,11 @@ def main():
 
     print("found %d devices" % len(nearby_devices))
 
-for addr, name in nearby_devices:
-    try:
-        print("  %s - %s" % (addr, name))
-    except UnicodeEncodeError:
-        print("  %s - %s" % (addr, name.encode('utf-8', 'replace')))
+    for addr, name in nearby_devices:
+        try:
+            print("  %s - %s" % (addr, name))
+        except UnicodeEncodeError:
+            print("  %s - %s" % (addr, name.encode('utf-8', 'replace')))
 
     for addr, name in nearby_devices:
         btrssi = BluetoothRSSI(addr=addr)
@@ -38,7 +38,8 @@ for addr, name in nearby_devices:
                 #print "Approximate Distance:" + str(distance)
                 #print "RSSI: " + str(rssi_bt)
                 time.sleep(.2)
-
+        if count is 0:
+            count = 1
         avg_distance = total_dist / count
         print "%s %s %s" % (addr, name, str(avg_distance))
 
